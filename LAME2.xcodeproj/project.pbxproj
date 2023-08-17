@@ -7,18 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A81BA4F02A785A8300141C27 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81BA4EF2A785A8300141C27 /* MapView.swift */; };
 		A8EB65712A71D48E0026040E /* LAME2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EB65702A71D48E0026040E /* LAME2App.swift */; };
 		A8EB65732A71D48E0026040E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EB65722A71D48E0026040E /* ContentView.swift */; };
 		A8EB65752A71D4910026040E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8EB65742A71D4910026040E /* Assets.xcassets */; };
 		A8EB65782A71D4910026040E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8EB65772A71D4910026040E /* Preview Assets.xcassets */; };
+		A8EB65812A71D53E0026040E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EB65802A71D53E0026040E /* DataManager.swift */; };
+		A8EB65832A71DB470026040E /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EB65822A71DB470026040E /* ControlView.swift */; };
+		A8EB65852A71DB780026040E /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EB65842A71DB780026040E /* TrainingView.swift */; };
+		A8EB65892A71DBF50026040E /* RobotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EB65882A71DBF50026040E /* RobotManager.swift */; };
+		A8EB658B2A71E21B0026040E /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EB658A2A71E21B0026040E /* Preference.swift */; };
+		A8EB658D2A71E5800026040E /* ConcentricCirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EB658C2A71E5800026040E /* ConcentricCirclesView.swift */; };
+		A8F266572A7200AD0021660C /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F266562A7200AD0021660C /* PreferencesView.swift */; };
+		A8F2941A2A7440E3003471AE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F294192A7440E3003471AE /* LocationManager.swift */; };
+		A8F294272A75BAFE003471AE /* MapOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F294262A75BAFE003471AE /* MapOverlayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A81BA4EF2A785A8300141C27 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		A8EB656D2A71D48E0026040E /* LAME2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LAME2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8EB65702A71D48E0026040E /* LAME2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAME2App.swift; sourceTree = "<group>"; };
 		A8EB65722A71D48E0026040E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A8EB65742A71D4910026040E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8EB65772A71D4910026040E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A8EB65802A71D53E0026040E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		A8EB65822A71DB470026040E /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
+		A8EB65842A71DB780026040E /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
+		A8EB65882A71DBF50026040E /* RobotManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotManager.swift; sourceTree = "<group>"; };
+		A8EB658A2A71E21B0026040E /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
+		A8EB658C2A71E5800026040E /* ConcentricCirclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentricCirclesView.swift; sourceTree = "<group>"; };
+		A8F266562A7200AD0021660C /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		A8F294192A7440E3003471AE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		A8F294262A75BAFE003471AE /* MapOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapOverlayView.swift; path = ../MapOverlayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +71,20 @@
 		A8EB656F2A71D48E0026040E /* LAME2 */ = {
 			isa = PBXGroup;
 			children = (
-				A8EB65702A71D48E0026040E /* LAME2App.swift */,
-				A8EB65722A71D48E0026040E /* ContentView.swift */,
 				A8EB65742A71D4910026040E /* Assets.xcassets */,
 				A8EB65762A71D4910026040E /* Preview Content */,
+				A8EB65702A71D48E0026040E /* LAME2App.swift */,
+				A8EB65722A71D48E0026040E /* ContentView.swift */,
+				A8F294192A7440E3003471AE /* LocationManager.swift */,
+				A8EB658A2A71E21B0026040E /* Preference.swift */,
+				A8EB658C2A71E5800026040E /* ConcentricCirclesView.swift */,
+				A8EB65882A71DBF50026040E /* RobotManager.swift */,
+				A8EB65802A71D53E0026040E /* DataManager.swift */,
+				A8EB65822A71DB470026040E /* ControlView.swift */,
+				A8F294262A75BAFE003471AE /* MapOverlayView.swift */,
+				A8F266562A7200AD0021660C /* PreferencesView.swift */,
+				A8EB65842A71DB780026040E /* TrainingView.swift */,
+				A81BA4EF2A785A8300141C27 /* MapView.swift */,
 			);
 			path = LAME2;
 			sourceTree = "<group>";
@@ -137,8 +167,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8EB658D2A71E5800026040E /* ConcentricCirclesView.swift in Sources */,
+				A81BA4F02A785A8300141C27 /* MapView.swift in Sources */,
+				A8EB65812A71D53E0026040E /* DataManager.swift in Sources */,
 				A8EB65732A71D48E0026040E /* ContentView.swift in Sources */,
 				A8EB65712A71D48E0026040E /* LAME2App.swift in Sources */,
+				A8EB65852A71DB780026040E /* TrainingView.swift in Sources */,
+				A8EB65892A71DBF50026040E /* RobotManager.swift in Sources */,
+				A8F2941A2A7440E3003471AE /* LocationManager.swift in Sources */,
+				A8EB65832A71DB470026040E /* ControlView.swift in Sources */,
+				A8EB658B2A71E21B0026040E /* Preference.swift in Sources */,
+				A8F294272A75BAFE003471AE /* MapOverlayView.swift in Sources */,
+				A8F266572A7200AD0021660C /* PreferencesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +315,10 @@
 				DEVELOPMENT_TEAM = PD5U6R7BH5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LAME2/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location for...";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Please select";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please select";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +348,10 @@
 				DEVELOPMENT_TEAM = PD5U6R7BH5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LAME2/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location for...";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Please select";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please select";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
