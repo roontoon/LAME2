@@ -14,7 +14,7 @@ struct ContentView: View {
                 .tag(1)
             TrainingView() // No need to pass preference here
                 .tabItem {
-                    Label("Training", systemImage: "person.2.square.stack")
+                    Label("Training 1", systemImage: "person.2.square.stack")
                 }
                 .tag(2)
             PreferencesView(preference: preference) // pass it here
@@ -24,7 +24,7 @@ struct ContentView: View {
                 .tag(3)
             ConcentricCirclesView()
                 .tabItem {
-                    Label("Circles", systemImage: "circle.circle")
+                    Label("Circles in circles", systemImage: "circle.circle")
                 }
                 .tag(4)
         }
