@@ -1,4 +1,4 @@
-// Comment indicating that this is a test view for joystick control
+// Test view for joystick control
 import SwiftUI  // Import the SwiftUI framework
 
 // Define a SwiftUI View struct named ConcentricCirclesView
@@ -57,23 +57,59 @@ struct ConcentricCirclesView: View {
                         .frame(width: blackCircleDiameter, height: blackCircleDiameter)
                         .position(blackCirclePosition ?? centerPoint)
 
-                    // Draw the bisecting lines for the outer and inner circles
+
                     Path { path in
+                        // Vertical bisecting line for the outer circle
                         path.move(to: CGPoint(x: centerPoint.x, y: centerPoint.y - outerCircleRadius))
+                        path.addLine(to: CGPoint(x: centerPoint.x, y: centerPoint.y - innerCircleRadius))
+                        
+                        path.move(to: CGPoint(x: centerPoint.x, y: centerPoint.y + innerCircleRadius))
                         path.addLine(to: CGPoint(x: centerPoint.x, y: centerPoint.y + outerCircleRadius))
+                        
+                        // Horizontal bisecting line for the outer circle
                         path.move(to: CGPoint(x: centerPoint.x - outerCircleRadius, y: centerPoint.y))
+                        path.addLine(to: CGPoint(x: centerPoint.x - innerCircleRadius, y: centerPoint.y))
+                        
+                        path.move(to: CGPoint(x: centerPoint.x + innerCircleRadius, y: centerPoint.y))
                         path.addLine(to: CGPoint(x: centerPoint.x + outerCircleRadius, y: centerPoint.y))
                     }
                     .stroke(style: StrokeStyle(lineWidth: 2))
+
+
                 }
                 // Add drag gesture to the ZStack
                 .gesture(
                     DragGesture(minimumDistance: 0)
                         .onChanged { value in
-                            // Gesture handling code for drag changes
+                            // Calculate distance and angle from center
+                            let delta = CGPoint(x: value.location.x - centerPoint.x, y: value.location.y - centerPoint.y)
+                            let distance = sqrt(pow(delta.x, 2) + pow(delta.y, 2))
+                            let angle = atan2(delta.y, delta.x)
+
+                            // Set the black circle position
+                            if distance > outerCircleRadius {
+                                let boundedX = cos(angle) * outerCircleRadius + centerPoint.x
+                                let boundedY = sin(angle) * outerCircleRadius + centerPoint.y
+                                blackCirclePosition = CGPoint(x: boundedX, y: boundedY)
+                            } else {
+                                blackCirclePosition = value.location
+                            }
+
+                            // Calculate speed
+                            speed = min(Double(distance / outerCircleRadius), 1.0)
+
+                            // Calculate direction
+                            direction = Double(angle) * 180 / Double.pi - 90 + 180
+                            if direction < 0 {
+                                direction += 360
+                            } else if direction > 360 {
+                                direction -= 360
+                            }
                         }
                         .onEnded { _ in
-                            // Gesture handling code for drag end
+                            blackCirclePosition = centerPoint
+                            speed = 0
+                            direction = 0
                         }
                 )
                 // Initialize the black circle's position
