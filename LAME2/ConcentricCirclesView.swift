@@ -5,11 +5,11 @@ struct ConcentricCirclesView: View {
     @State private var blackCirclePosition: CGPoint? = nil
     @State private var speed: Double = 0
     @State private var direction: Double = 0
-    
+
     // Constants for the radius of the outer and inner circles
-    private let outerCircleRadius: CGFloat = UIScreen.main.bounds.width * 2/3 / 2
+    private let outerCircleRadius: CGFloat = UIScreen.main.bounds.width * 2 / 3 / 2
     private var innerCircleRadius: CGFloat { outerCircleRadius * 0.25 }
-    
+
     var body: some View {
         // Diameter of the black circle
         let blackCircleDiameter: CGFloat = innerCircleRadius * 2
@@ -22,15 +22,16 @@ struct ConcentricCirclesView: View {
             // ZStack to overlay multiple shapes and text
             ZStack {
                 // VStack for displaying speed and direction
-                VStack {
+               HStack {
                     Text("Speed: \(speed, specifier: "%.2f")")
-                        .font(.title)
+                        .font(.body)
+                   Spacer()
                     Text("Direction: \(direction, specifier: "%.2f")°")
-                        .font(.title)
+                        .font(.body)
                 }
                 // Position the VStack
                 .position(x: geometry.size.width / 2, y: geometry.size.height / 4)
-                
+
                 // ZStack for drawing circles and handling gestures
                 ZStack {
                     // Outer circle
@@ -48,7 +49,7 @@ struct ConcentricCirclesView: View {
                         Sector(center: centerPoint, endPoint: blackCirclePosition, startAngle: CGFloat(direction - 45), endAngle: CGFloat(direction + 45))
                             .fill(RadialGradient(gradient: Gradient(colors: [Color.green, Color.red]), center: .center, startRadius: innerCircleRadius, endRadius: sqrt(pow(blackCirclePosition.x - centerPoint.x, 2) + pow(blackCirclePosition.y - centerPoint.y, 2))))
                     }
-                    
+
                     // Black circle
                     Circle()
                         .fill()
@@ -102,7 +103,7 @@ struct Sector: Shape {
     var endPoint: CGPoint
     var startAngle: CGFloat
     var endAngle: CGFloat
-    
+
     func path(in rect: CGRect) -> Path {
         var path = Path()
         path.move(to: center)
